@@ -453,7 +453,7 @@ SL_COMMENT
     ;
 
 ML_COMMENT
-    :   '/*' ('*' {type=DOC_COMMENT;})? .* '*/' {$channel=HIDDEN;}
+    :   '/*' ('*' {$type=DOC_COMMENT;})? .* '*/' {$channel=HIDDEN;}
     ;
 
 OPEN_ELEMENT_OPTION
@@ -571,7 +571,7 @@ NESTED_ARG_ACTION
 	;
 
 ACTION
-	:	NESTED_ACTION ('?' {type=SEMPRED;})?
+	:	NESTED_ACTION ('?' {$type=SEMPRED;})?
 	;
 
 fragment
